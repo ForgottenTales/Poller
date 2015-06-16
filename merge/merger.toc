@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Probeklausur}{2}
+\contentsline {subsection}{\numberline {1.1}Erlaeutern sie kurz folgende Begriffe: Wiener Filter, Gauss Filter, Notch Filter und Histogram.}{2}
+\contentsline {subsection}{\numberline {1.2}Aufgabe 2: Welche Verfahren verwendet man um weisses Rauschen zu unterdr\IeC {\"u}cken?}{2}
+\contentsline {subsection}{\numberline {1.3}Sie haben im Ortsbereich einen Spalttiefpass in Form einer 3 x 3 Matrix}{2}
+\contentsline {subsection}{\numberline {1.4}Welcher der folgenden Filter ist ein Tiefpass?}{2}
+\contentsline {subsection}{\numberline {1.5}Welcher Art sind die nachfolgenden Filter? Falls mehrere Tiefpassfilter dabei sind, welcher hat den gr\IeC {\"o}\IeC {\ss }ten Weichzeichner? Geben sie jeweils die Funktion f\IeC {\"u}r f(i, j) an.}{2}
+\contentsline {section}{\numberline {2}Hilfestellung zu genannten Aufgaben}{5}
+\contentsline {subsection}{\numberline {2.1}Definition FFT,Hochpassfilter,Schwellwert}{5}
+\contentsline {subsection}{\numberline {2.2}Tiefpass im Frequenzbereich und Ortsbereich beschreiben}{5}
+\contentsline {subsection}{\numberline {2.3}Funktionsweise Inverser Filter}{5}
+\contentsline {subsection}{\numberline {2.4}Rechenaufgaben wie in Probeklausur}{5}
+\contentsline {subsection}{\numberline {2.5}KEINE Auswahl des geeignetsten Filters}{5}
+\contentsline {section}{\numberline {3}Sonstige Informationen}{5}

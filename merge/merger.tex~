@@ -1,0 +1,282 @@
+% ------------------------------------------------------
+\documentclass[pdftex,oneside,12pt,parskip=half,abstracton,ngerman]{scrartcl}
+\usepackage{ngerman,a4}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage[printonlyused]{acronym}
+\usepackage[automark]{scrpage2}
+\automark{section}
+\usepackage{pdfpages} 
+\usepackage{listings}
+\usepackage[scaled]{helvet}
+\usepackage{courier}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{anysize}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{geometry}
+\geometry{
+  left=1cm,
+  right=1cm,
+  top=1cm,
+  bottom=1cm,
+  bindingoffset=4mm
+}
+%Seitengroesse
+\usepackage{fullpage}
+%Zeilenumbruch und mehr
+\usepackage[activate]{microtype}
+% Zeilenabstand
+\usepackage[onehalfspacing]{setspace}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage{framed}
+% Spezielle Tabellenform fuer Deckblatt
+\usepackage{longtable}
+\setlength{\tabcolsep}{10pt} %Abstand zwischen Spalten
+\renewcommand{\arraystretch}{1.0} %Zeilenabstand
+\usepackage{pdfpages}
+% ------------------------------------------------------
+\begin{document}         
+	% Start your text
+% ------------------------------------------------------
+
+
+
+% ------------------------------------------------------
+% ------------------------------------------------------
+% ------------------------------------------------------
+\tableofcontents
+\newpage
+\section{Probeklausur}
+\subsection{Erlaeutern sie kurz folgende Begriffe: Wiener Filter, Gauss Filter, Notch Filter und Histogram.}
+
+Wiener-Filter
+
+    Das Wiener-Filter oder auch Wiener-Kolmogoroff-Filter ist ein Filter zur Signalverarbeitung. Es führt eine optimale Rauschunterdrückung durch. Der Wiener-Filter wird durch die folgenden Eigenschaften beschrieben:
+
+    Voraussetzung: Das Signal und das additive Rauschen gleichen stochastischen Prozessen mit bekannter Spektralverteilung oder bekannter Autokorrelation und Kreuzkorrelation
+
+    Fehlerkriterium: Minimale quadratische Abweichung
+
+
+    Poller:
+
+    - inverser Filter
+
+    - Problematik: Division durch 0
+
+    - Bandbegrenzter Filter
+
+    - Kein fester Wert, sondern Umgebungswert statt 0 (Umgebungsberechnung)
+
+    - stochastisch
+
+    - Tiefpass
+
+
+Gauß-Filter
+
+    In der Bildverarbeitung werden Gauß-Filter zur Glättung oder Weichzeichnen des Bildinhaltes verwendet. Es kann damit das Bildrauschen vermindert werden: Kleinere Strukturen gehen verloren, gröbere Strukturen bleiben dagegen erhalten. Spektral kommt die Glättung einem Tiefpassfilter gleich.
+
+
+Notch-Filter (Kerbfilter)
+
+    Ein Kerbfilter (englisch notch filter) ist ein elektronischer Filter, mit dem Frequenzen innerhalb eines engen Frequenzbereiches ausgefiltert werden können. Anschaulich wird eine Kerbe in das Frequenzdiagramm eingefügt.
+
+    Kerbfilter stellen einen besonders schmalbandigen Typ von Bandsperrfilter dar, welche in der Übertragungsfunktion nur eine Nullstelle aufweisen und damit nicht ein breites Frequenzband, sondern idealerweise genau eine Frequenz möglichst stark dämpfen. (Quelle: https://de.wikipedia.org/wiki/Kerbfilter)
+
+
+Minimumfilter
+
+    Beim Minimumfilter werden die Grauwerte der Pixel in einer definierten Umgebung eines Pixels aufgesammelt und der Größe nach sortiert. Nun wird der kleinste Grauwert dieser sortierten Liste gewählt, dieser ersetzt den Grauwert des aktuellen Pixels.
+
+
+Medianfilter
+
+    Ein Medianfilter ist ein nichtlinearer Filter, das u. a. in der Bildverarbeitung angewendet wird. Es gehört der Klasse der Rangordnungsfilter an. Beim Einsatz in der Bildverarbeitung werden die Grauwerte der Pixel innerhalb einer definierten Umgebung eines Pixels im Zentrum dieser Umgebung nach ihrer Größe sortiert, wobei der Wert des zu ersetzenden Pixels in diese Berechnung mit einfließt. Der mittlere Wert der sortierten Liste wird zurückgegeben und der Wert des zentralen Pixels wird durch ihn ersetzt.
+
+    Medianfilter haben im Vergleich zu Boxfiltern den Vorteil, dass einzelne Pixel ersetzt werden, ohne dadurch eine Kantenglättung zu bewirken.
+
+
+Maximumfilter
+
+    Beim Maximumfilter werden die Grauwerte der Pixel in einer definierten Umgebung eines Pixels aufgesammelt und der Größe nach sortiert. Nun wird der größte Grauwert dieser sortierten Liste gewählt, dieser ersetzt den Grauwert des aktuellen Pixels.
+
+
+Hochpass
+
+    Der Hochpass-Filter ist eine Methode zum Nachschärfen von Bildern. Der Filter sucht die Kanten im Bild, das heißt Stellen großer Helligkeitsunterschiede. Diese Kanten erhält der Filter in einem – in den meisten Programmen einstellbarem – Radius, der Rest des Bildes erscheint als konturlose, graue Fläche.
+
+
+    Poller: Filter mit 1 als Multiplikator für hohe Frequenzen
+
+
+Histogramm
+
+    Darstellung der Verteilung von Farbe bzw. Helligkeit über die Pixel.
+
+    Statistische Häufigkeit der Farbwerte bzw. Grauwerte in einem Bild.
+
+    Pro Bild, pro Farbkanal, pro Zeile, pro Spalte, pro Ausschnitt.
+
+
+    Poller:
+
+    - Funktion, bei der Helligkeits/Farbwert anteilsmäßig auf dem Bild aufgetragen werden
+
+
+
+\subsection{Aufgabe 2: Welche Verfahren verwendet man um weisses Rauschen zu unterdrücken?}
+1) Abmindern des weißen Rauschen
+2) Tiefpassfilter / Medianfilter
+
+    - Gauß-Filter
+
+3) Inverse Filterung
+
+    - Wiener-Filter 
+
+    - Amplitudenbegrenzte Filter
+
+
+Poller:
+
+    - Tiefpassfilter
+
+    - Medianfilter
+
+    - Notch-Filter (wenn Rauschen periodisch auftritt)
+
+
+
+\subsection{Sie haben im Ortsbereich einen Spalttiefpass in Form einer 3 x 3 Matrix.
+Filtern sie die beiden mittleren Werte dieses Ausschnitts des Bildspeichers.}
+
+Spalttiefpass: \\ | 1 1 1 | \\
+                | 1 1 1 | \\
+                | 1 1 1 | * (1 / 9) \\
+                
+f'(x, y) = (1/p) * \\ 
+(   a * f(x-1, y-1) + b * f(x-1, y) + c * f(x-1, y+1)\\
+                     + d * f(  x, y-1) + e * f(  x, y) + g * f(  x, y+1)\\
+                     + h * f(x+1, y-1) + i * f(x+1, y) + j * f(x+1, y+1) )
+                     
+p = a + b + c + ... + j
+
+Sei der Ursprung (0, 0) unten links in der abgebildeten Matrix. Dann gilt:
+
+f'(1, 1) = (1 / 9) * (125 + 126 + 117 + 123 + 255 + 123 + 122 + 127 + 122) ~= 137,78 ( -> Poller kann nicht rechnen?)\\
+f'(2, 1) = (1 / 9) * (123 + 255 + 123 + 122 + 127 + 122 + 129 + 120 + 125) ~= 138,44 
+
+
+
+\subsection{Welcher der folgenden Filter ist ein Tiefpass?}
+
+    - Gauss Operator                    Ja
+
+    - idealer Operator                  kA Er hat ganz am Anfang was von einem Idealen Tiefpass erzählt, dann also ja
+
+    - Notch Filter                      Nein
+
+    - Robertson Operator                Kantendetektor -> Nein, eher Hochpass
+
+
+Idealer Operator: "Ist die Frage, ob man da den idealen Tiefpass drunter versteht" H(u,v) = 0 für f < f\_s, 1 für f >= f\_s
+
+
+
+
+\subsection{Welcher Art sind die nachfolgenden Filter?
+Falls mehrere Tiefpassfilter dabei sind, welcher hat den größten Weichzeichner?
+Geben sie jeweils die Funktion für f(i, j) an.}
+
+
+|               |\\
+|     1  1  1   |\\
+|     1  0  1   | \\
+|     1  1  1   |\\
+|               |\\
+    / 8   -- Weichzeichner, Tiefpassfilter
+
+-- f'(i,j) = 1/8 * ( f(i-1,j-1) + f(i,j-1) + f(i+1,j-1) + f(i-1,j) + f(i+1,j) + f(i-1,j+1) + f(i,j+1) + f(i+1,j+1) )
+
+| -1 -1 -1 -1 -1|\\
+| -1  0  0  0 -1|\\
+| -1  0  16  0 -1|\\ 
+| -1  0   0   0 -1|\\
+| -1 -1 -1 -1 -1|\\
+    / 1 ---- Kantendetektor, vertikale / horizontale Kanten (KEIN Tiefpass)
+
+-- f'(i, j) = \\
+1 * (  (-1) * f(i-2, j-2) + (-1) * f(i-2, j-1) + (-1) * f(i-2, j) + (-1) * f(i-2, j+1) + (-1) * f(i-2, j+2)
+
+     + (-1) * f(i-1, j-2)                        +                                       (-1) * f(i-1, j+2)
+
+     + (-1) * f(  i, j-2)          +           16 * f(  i, j)         +                  (-1) * f(  i, j+2)
+
+     + (-1) * f(i+1, j-2)                        +                                       (-1) * f(i+1, j+2)
+
+     + (-1) * f(i+2, j-2) + (-1) * f(i+2, j-1) + (-1) * f(i+2, j) + (-1) * f(i+2, j+1) + (-1) * f(i+2, j+2) )
+
+
+|  0  8  8 0 0|\\
+|  0  0  1 0 0    |\\
+|  8  1  0 1 8|\\ 
+|  0  0  1 0 0    |\\
+|  0  8  8 0 0 |\\
+    /52 --- Tiefpassfilter, größter Weichzeichner ("weil sehr viele Pixel, die den Einzelpixel nicht betreffen, beachtet werden)
+
+-- f'(i,j) = 1/52 * (                  8 * f(i-1, j-2)                + 8 * f(i+1,j-2) 
+                                                         + f(i, j-1) 
+                     + 8 * f(i-2, j) +     f(i-1,   j)                +     f(i+1,   j) + 8 * f(i+2, j) 
+                                                        +  f(i, j+1) 
+                                     + 8 * f(i-1, j+2)                + 8 * f(i+1,j+2) )
+
+|  1 0 0 0 0        |\\
+|  0 1 0 0 0      |\\
+|  0 0 1 0 0   |\\ 
+|  0 0 0 1 0  |\\
+|  0 0 0 0 1|\\
+    / 5   -- Bewegunsunschärfe, Motion Blur, Weichzeichner, auch Tiefpass
+
+-- f'(i, j) = 1 / 5 * ( f(i-2, j+2) + f(i-1, j+1) + f(i, j) + f(i+1, j-1) + f(i+2, j-2))
+
+|               |\\
+|    -1 -1 -1   |\\
+|    -1  9 -1   |\\ 
+|    -1 -1 -1   |\\
+|               |\\
+    / 1  Hochpassfilter, schärft das Bild
+
+-- f'(i, j) = \\(  (-1) * f(i-1, j-1) + (-1) * f(i-1, j) + (-1) * f(i-1, j+1) \\
+               + (-1) * f(  i, j-1) +    9 * f(  i, j) + (-1) * f(  i, j+1) \\
+               + (-1) * f(i+1, j-1) + (-1) * f(i+1, j) + (-1) * f(i+1, j+1) )
+% -------------------------------------------------------------------------_
+% -------------------------------------------------------------------------_
+% -------------------------------------------------------------------------_
+\section{Hilfestellung zu genannten Aufgaben}
+\subsection{Definition FFT,Hochpassfilter,Schwellwert}
+\subsection{Tiefpass im Frequenzbereich und Ortsbereich beschreiben}
+\subsection{Funktionsweise Inverser Filter}
+\subsection{Rechenaufgaben wie in Probeklausur}
+siehe oben :P
+\subsection{KEINE Auswahl des geeignetsten Filters}
+
+\section{Sonstige Informationen}
+        \includepdf[pages={1,4,5-8,13,15,16,17}]{input/1.pdf}
+        \includepdf[pages={8,9,12,19,20}]{input/2.pdf}
+        \includepdf[pages={1,4}]{input/3.pdf}
+        \includepdf[pages={65,66}]{input/4.pdf}
+% ------------------------------------------------------
+% ------------------------------------------------------
+% ------------------------------------------------------
+
+
+
+% ------------------------------------------------------
+	% Stop your text
+\end{document}
+% ------------------------------------------------------
